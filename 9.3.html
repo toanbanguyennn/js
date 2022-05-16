@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<td><input type="text" id="height">chieu cao</td>
+<br>
+<td><input type="text" id="weight">can nang</td>
+<br>
+<button type="button" onclick="showMessage();">Convert</button>
+</body>
+<p id = "result"></p>
+<script>
+    function showMessage() {
+        let a = parseFloat(document.getElementById('height').value)
+        let b = parseFloat(document.getElementById('weight').value)
+        let bmi = b / (a ** 2)
+        if (bmi < 18)
+            document.getElementById("result").innerHTML="phanloai = underweig"
+        else if (bmi < 25.0)
+            document.getElementById("result").innerHTML="phanloai = normal"
+        else if (bmi < 30.0)
+            document.getElementById("result").innerHTML="phanloai = Overweight"
+        else
+            document.getElementById("result").innerHTML="phanloai = Obese"
+    }
+
+</script>
+</html>
